@@ -1,0 +1,508 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+body{
+    height: fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+
+.header{
+    width: 100%;
+    height:95vh;
+    background-color:rgba(253, 253, 253, 0.562);
+    position:relative ;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    overflow: auto;
+} 
+.logo{
+    width:250px;
+    height:150px ;
+    margin-left: 100px;
+    float: left;
+    margin-top: 20px; 
+}
+
+.header .list {
+    list-style-type: none ;
+    float: left;
+    margin-left: 150px;
+    margin-top: 70px; 
+}
+.header .list .li1{
+    display: inline-block ;
+    margin-left: 55px; 
+}
+.header .list a{
+    position: relative;
+    text-decoration: none;
+    font-size: 22px;
+    color:#044252;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: .5s;
+    padding: 5px;
+
+}
+
+.header .list a::after{
+    content:"";
+    position: absolute;
+    border: 2px solid rgb(8, 136, 187);
+    left: 0;
+    top:0; 
+    transition: transform 0.2s;
+    transform: scale(0);
+}
+
+.header .list a::after{
+    border-width: 2px 0;
+    height: 91%; 
+    width: 98%;
+    transform: scale3d(0,1,1);
+    transform-origin: left;
+    transition: .3s;
+}
+.header .list a::before{
+    content:"";
+    position: absolute;
+    border: 2px solid rgb(8, 136, 187);
+    left: 0;
+    top:0; 
+    transition: transform 0.5s;
+    transform: scale(0);
+}
+.header .list a::before{
+    border-width: 0 2px;
+    height: 102%; 
+    width: 95.5%;
+    transform: scale3d(1,0,1);
+    transition: .3s;
+}
+.header .list a:hover:before{
+    transform: scale3d(1,1,1);
+}
+.header .list a:hover:after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.header .list a i {
+    margin-right: 5px;
+}
+.header a:hover {
+   color: #10a8d6;
+   
+}
+.header .headicons{
+    position: absolute;
+    top: 50px;
+    right: 270px;
+}
+.header .headicons i{
+    padding: 10px;
+}
+.header .headicons  a{
+    text-decoration: none;
+    font-size: 30px;
+    color:#044252;
+}
+.header .headicons  a .zero{
+    position: absolute;
+    top:20px;
+    right:-5px;
+    font-size: 11px;
+    background-color: #32c752;
+    border-radius: 50%;
+    padding: 5px;
+}
+.header .headicons p{
+position: absolute;
+top: 20px;
+right: -100px;
+font-size: 19px;
+color: #000000;
+}
+ .menu{
+ position: absolute;
+ top: 105px;
+ left: 490px;
+ border: 2px solid rgb(6, 39, 66);
+ border-radius: 5%;
+ padding: 10px;
+ opacity: 1;
+ visibility: hidden;
+ background-color: rgb(255, 255, 255);
+ z-index: 10;
+ transform: scale(0,0);
+ transition: .5s;
+}
+.menu ul{
+    margin: 5px;
+    text-align: center;
+    font-size: 15px;
+    color:#044252;
+    list-style: none;
+    display:inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 40px;
+}
+.menu ul .litop{
+    font-size: 30px;
+    padding: 2px;
+    padding-bottom: 20px;
+    text-shadow: 1px 1px 4px;
+    text-transform: capitalize;
+}
+.header .dropmenu .list .li11:hover .menu {
+    visibility:visible;
+    opacity: 1;
+    transform: scale(1,1);
+}
+.header .dropmenu .list a{
+    position: relative;
+    padding: 5px;
+}
+
+ .container{
+    width: 80%;
+    margin: auto;
+    margin-top: 150px;
+    height:200px;
+}
+.container img{
+    width: 100%;
+    height: 700px;
+}
+.section2{
+    width: 100%;
+    height: 115vh;
+}
+.Special{
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+.Special::after{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 200px;
+    background-color: #044252;
+    left:850;
+    transition: 1s;
+}
+.Special:hover::after{
+    width: 200px;
+}
+.cards{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height:fit-content;
+    background-color: #ffffff;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-between;
+    
+}
+.cards .card{
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    height: 550px;
+    width:350px;;
+    background-color: #ffffff;
+    justify-content: center;
+  
+}
+.cards .card img{
+    position: absolute;
+    height: 450px;
+    width:350px;
+    background-size: cover;
+}
+.cards .card .gamename{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 500;
+    /* margin-left: -200px; */
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    z-index: 3;
+    left: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22;
+    font-weight: 900;
+    
+}
+.cards .card .gamename .Most{
+    margin-top: -40px;
+    font-size: 20px;
+    color: rgb(6, 61, 124);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.cards .card .gamename i {
+    text-align: center;
+    font-size: 30px;
+    background-color: #0954aa;
+    padding-right: 5px;
+    padding-left: 5px;
+    display: inline-block;
+  margin-left: 315px;
+  margin-top: -35px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card:hover .gamename i{
+    opacity: 1;
+}
+.discounts{
+ display: flex;
+ margin: auto;
+ margin-top: 5px;
+ width: 90%;
+ height: 500px;
+ justify-content: flex-end;
+ justify-content: space-around;
+}
+.discounts .discount{
+    width: 420px;
+    height: 360px;
+    transition: .5s;
+    transform: scale(.95,.95);
+}
+.discounts .discount:hover{
+    transform: scale(1.07,1.1);
+    border-radius:100px;
+}
+
+.discounts .discount img{
+    width: 420px;
+    height: 360px;
+    border-radius:40px;
+}
+.discounts .dis1{
+    background-color: rgb(2, 49, 63);
+    position: relative;
+    width:800px ;
+    height: 360px;
+    font-size: 21px;
+    color: rgb(250, 242, 242);
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid rgb(4, 167, 243);
+    border-radius: 40px;
+    padding: 15px;
+    
+}
+.discounts .dis1 p{
+    margin-top: 5px;
+    margin-left: 10px;
+    text-shadow: 2px 2px rgba(16, 124, 115, 0.411);
+    color: #eaecec;
+    word-spacing: 5px;
+}
+.discounts .dis1 .underline1{
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #ffffff;
+    bottom: 15px;
+    right: 20;
+    
+}
+.discounts .dis1 .underline2{
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #ffffff;
+    bottom: 15px;
+    right:120;
+}
+.discounts .dis1 .underline3{
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #ffffff;
+    bottom: 15px;
+    right: 220;
+}
+.section3{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.titel{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.titel .underline3{
+    margin: auto;
+    margin-top: 10px;
+    width: 200px;
+    height: 5px;
+    background-color: #0954aa;
+}
+.Allicons {
+    display:flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-bottom: 20px;
+}
+.iconitem{
+    text-align: center;
+    border-right: 1px solid var(--maincolor);
+    padding-left: 30px;
+    margin-left: 20px;
+    border-left: 2px solid rgb(32, 126, 180);
+    border-right: 2px solid rgb(32, 126, 180);
+    padding-right: 30px;
+}
+.iconwords h3{
+    font-size: 17px;
+}
+.iconwords span{
+    color: gray;
+    font-size: 15px;
+}
+.iconimg{
+    background-image: url(../images/service-icon.png);
+    height: 55px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+.iconimg-1{
+background-position: center 5px;
+transition: all .5s;
+}
+.iconitem:hover .iconimg-1{
+    background-position: center -86px;
+}
+.iconimg-2{
+background-position: center -180px;
+transition: all .5s;
+}
+.iconitem:hover .iconimg-2{
+    background-position: center -273px;
+}
+.iconimg-3{
+background-position: center -366px;
+transition: all .5s;
+}
+.iconitem:hover .iconimg-3{
+    background-position: center -455px;
+}
+.iconimg-4{
+background-position: center -549px;
+transition: all .5s;
+ }
+ .iconitem:hover .iconimg-4{
+    background-position: center -639px;
+}
+.iconimg-5{
+background-position: center -734px;
+transition: all .5s;
+}
+.iconitem:hover .iconimg-5{
+    background-position: center -826px;
+}
+.listgames{
+    display: flex;
+    justify-content: center;
+}
+.listgames li{
+    margin-left: 30px;
+}
+ .section4{
+    width: 100%;
+    height:180vh;
+ }
+.container2{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    height:200px;
+}
+.container2 .listgames{
+    list-style: none;
+    font-size: 35px;
+    margin-bottom: 80px;
+    font-family: fantasy;
+    text-decoration: underline;
+    text-shadow: 1px 1px 3px rgb(13, 89, 124);
+}
+.gameslist-items{
+ display: flex;
+ grid-gap:150px;
+ justify-content: center;
+ align-items: center;
+}
+.container2 img{
+    height: 450px;
+    width:350px;
+    margin-top: 30px;
+}
+.Gameimg{
+ position: relative;
+}
+.gameoverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform:scalex(0);
+    opacity: 1;
+    transition: 0.4s;
+}
+.gameoverlay ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.gameoverlay ul li{
+    background-color:rgba(3, 150, 248, 0.637);
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    margin-left:5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 30%;
+}
+.gameoverlay ul li i{
+    color: #ffffff;
+    line-height: 34px;
+}
+.game-in:hover .gameoverlay{
+    transform: scalex(1);
+}
+.game-in i.active{
+    color: yellow;
+}
+.follow-game span{
+    display: block;
+    margin: 5px 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #000000;
+}
+.follow-game h3{
+    font-size: 20px;
+    color: #0954aa;
+}
+.follow-game i{
+    margin-top: 15px;
+}
+
